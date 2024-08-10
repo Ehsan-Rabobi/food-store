@@ -1,18 +1,20 @@
 import React from "react";
-import { Email, HelpOutline, Home } from "@mui/icons-material";
-import { Box, ListItem, MenuList, Typography } from "@mui/material";
+import { AccessTime, Email, HelpOutline, Home } from "@mui/icons-material";
+import { Box, Button, ListItem, MenuList, Typography } from "@mui/material";
+import CuerryImg from "../assets/image/curry.jpg";
+import NoodlesImg from "../assets/image/noodles.jpg";
+import StewImg from "../assets/image/stew.jpg";
 
 export default function Main() {
   return (
     <>
-      <Box>
+      <Box display={"flex"}>
         <Box
           padding={2}
           display={"flex"}
           flexDirection={"column"}
           alignItems={"end"}
-          height={400}
-          sx={{ width: "35%" }}
+          sx={{ width: "32%" }}
         >
           <Typography variant="h6" fontWeight={"bold"}>
             FOOD NINJA
@@ -72,7 +74,231 @@ export default function Main() {
             </Typography>
           </Box>
         </Box>
-        <Box></Box>
+        <Box
+          pt={2}
+          pl={6}
+          pr={6}
+          sx={{ backgroundColor: "#ebebeb", width: "68%" }}
+        >
+          <Box display={"flex"} justifyContent={"end"} gap={2}>
+            <Button
+              sx={{
+                color: "#ff4d47",
+                fontWeight: "600",
+                fontSize: "13px",
+                border: "2px solid #ff4d47",
+                borderRadius: "50px",
+                padding: "5px 12px",
+                "&:hover": {
+                  color: "#c5c5c5",
+                  backgroundColor: "#ff4d47",
+                },
+              }}
+            >
+              LOG IN
+            </Button>
+            <Button
+              sx={{
+                color: "#ff4d47",
+                fontWeight: "600",
+                fontSize: "13px",
+                border: "2px solid #ff4d47",
+                borderRadius: "50px",
+                padding: "5px 12px",
+                "&:hover": {
+                  color: "#c5c5c5",
+                  backgroundColor: "#ff4d47",
+                },
+              }}
+            >
+              SIGN IN
+            </Button>
+          </Box>
+          <Box
+            mt={4}
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"start"}
+          >
+            <Typography variant="h3" fontWeight={"bold"} color={"#525252"}>
+              Recipes
+            </Typography>
+            <Typography fontWeight={"bold"} color={"#777777"}>
+              For Ninjas
+            </Typography>
+          </Box>
+          <Box mt={7}>
+            <Typography
+              color={"slategrey"}
+              borderBottom={"1px solid #afafafd6"}
+              pb={1}
+            >
+              Latest Recipes
+            </Typography>
+            <Box
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"space-between"}
+              gap={3}
+              p={3}
+              m={3}
+            >
+              <Box
+                sx={{
+                  width: "230px",
+                  height: "250px",
+                  overflow: "hidden",
+                  backgroundColor: "white",
+                  boxShadow: " 0 0 10px rgba(0, 0, 0, 0.466)",
+                  position:'relative'
+                }}
+              >
+                <img
+                  src={StewImg}
+                  alt=""
+                  style={{ width: "100%", height: "75%", objectFit: "cover" }}
+                />
+                <Box position={'absolute'} top={8} left={8} sx={{backgroundColor:"gainsboro", borderRadius:"22px" , display:'flex', padding:'8px', gap:"5px"}}>
+                    <AccessTime sx={{fontSize:"20px" , color:"#5c5c5c"}}/>
+                    <Typography fontWeight={'bold'} fontSize={14} color={'#5c5c5c'}>25MINS</Typography>
+                </Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "26%",
+                    backgroundColor: "white",
+                    padding: "5px",
+                  }}
+                >
+                  <Typography
+                    fontSize={16}
+                    fontWeight={"bold"}
+                    color={"#535353"}
+                  >
+                    5 Bean Chili stew
+                  </Typography>
+                  <Typography
+                    fontWeight={"bold"}
+                    fontSize={14}
+                    color={"#838383"}
+                  >
+                    Recipe by Mario
+                  </Typography>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  width: "230px",
+                  height: "250px",
+                  overflow: "hidden",
+                  backgroundColor: "white",
+                  boxShadow: " 0 0 10px rgba(0, 0, 0, 0.466)",
+                  position:"relative"
+                }}
+              >
+                <img
+                  src={NoodlesImg}
+                  alt=""
+                  style={{ width: "100%", height: "75%", objectFit: "cover" }}
+                />
+                                <Box position={'absolute'} top={8} left={8} sx={{backgroundColor:"gainsboro", borderRadius:"22px" , display:'flex', padding:'8px', gap:"5px"}}>
+                    <AccessTime sx={{fontSize:"20px" , color:"#5c5c5c"}}/>
+                    <Typography fontWeight={'bold'} fontSize={14} color={'#5c5c5c'}>25MINS</Typography>
+                </Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "26%",
+                    backgroundColor: "white",
+                    padding: "5px",
+                  }}
+                >
+                  <Typography
+                    fontSize={16}
+                    fontWeight={"bold"}
+                    color={"#535353"}
+                  >
+                    Veg Noodles
+                  </Typography>
+                  <Typography
+                    fontWeight={"bold"}
+                    fontSize={14}
+                    color={"#838383"}
+                  >
+                    Recipe by Mario
+                  </Typography>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  width: "230px",
+                  height: "250px",
+                  overflow: "hidden",
+                  backgroundColor: "white",
+                  boxShadow: " 0 0 10px rgba(0, 0, 0, 0.466)",
+                  position:'relative'
+                }}
+              >
+                <img
+                  src={CuerryImg}
+                  alt=""
+                  style={{ width: "100%", height: "75%", objectFit: "cover" }}
+                />
+                                <Box position={'absolute'} top={8} left={8} sx={{backgroundColor:"gainsboro", borderRadius:"22px" , display:'flex', padding:'8px', gap:"5px"}}>
+                    <AccessTime sx={{fontSize:"20px" , color:"#5c5c5c"}}/>
+                    <Typography fontWeight={'bold'} fontSize={14} color={'#5c5c5c'}>25MINS</Typography>
+                </Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "26%",
+                    backgroundColor: "white",
+                    padding: "5px",
+                  }}
+                >
+                  <Typography
+                    fontSize={16}
+                    fontWeight={"bold"}
+                    color={"#535353"}
+                  >
+                    Tofu Curry
+                  </Typography>
+                  <Typography
+                    fontWeight={"bold"}
+                    fontSize={14}
+                    color={"#838383"}
+                  >
+                    Recipe by Mario
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+            <Typography
+              color={"slategrey"}
+              borderBottom={"1px solid #afafafd6"}
+              pb={1}
+            >
+              Most Popular
+            </Typography>
+          </Box>
+          <Button
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              margin: "40px auto",
+              fontWeight: "bold",
+              color: "#797979",
+              backgroundColor: "gainsboro",
+              transition:'all .2s',
+              '&:hover':{
+                backgroundColor:'gainsboro',
+                transform:"scale(1.2)"
+              }
+            }}
+          >
+            Learn more
+          </Button>
+        </Box>
       </Box>
     </>
   );
